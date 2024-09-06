@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Profession Pursuit</title>
+
+{% endblock %}
+
+{% block body %}
+{%include "nav.html" %}
+    <div class="container mt-5 p-4 bg-white rounded shadow-lg">
+
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 font-weight-bold">Profession Pursuit</h1>
+        <img id="banner" class="img-fluid rounded mb-4" src="https://be2a828f-92f1-4aab-8954-50e02668daa3-00-q5m8ajfyn9t9.picard.replit.dev/static/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg" alt="Banner Image">
+    </div>
+
+    <!-- About Section -->
+    <section class="mb-5 text-center">
+        <h2 class="mb-4">About Profession Pursuit</h2>
+        <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue platea dis suscipit auctor metus. Curae ultricies maecenas nam sapien consequat ultricies finibus facilisi. Curabitur adipiscing viverra donec erat dui suspendisse lobortis at habitant. Sapien integer primis nascetur finibus gravida. Conubia tristique potenti sodales faucibus lacus ante libero.
+        </p>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="mb-5 text-center">
+        <h2 class="mb-4">Open Positions</h2>
+        <div class="text-muted">
+          <div class="container mt-5">
+              <div class="row">
+                  <!-- Loop through the jobs list and display each job in a card -->
+                  {% for job in jobs %}
+                    {% include 'jobitems.html' %}
+                  {% endfor %}
+              </div>
+          </div>
+          
+        </div>
+    </section>
+
+    <!-- Contact Us Button -->
+    <div class="text-center">
+        <a href =" mailto:niketpathak)@gmail.com?subject=Questions%20about%20Job%20Openings&body=My%20name%20%3A%3Cyour%20name%3E%0D%0AMy%20Question%3A%3CQuestion%3E%0D%0A" type= "button" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+</div>
+{%include "footer.html" %}
+
+{% endblock %}
